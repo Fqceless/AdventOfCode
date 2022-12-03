@@ -3,7 +3,7 @@ All my code for the Advent Of Code 2022 event
 
 ***If you are doing Advent of Code:
 Please don't copy paste my code. 
-My code proobaby isn't even that good. 
+My code probaby isn't even that good. 
 This event is to help you hone your problem solving skills. 
 I don't wanna get in trouble becuase you are lazy.
 Thanks***
