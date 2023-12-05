@@ -173,5 +173,6 @@ public class d5p2 {
         }
         System.out.println(ret);
         System.out.println("time: " + ((System.currentTimeMillis() - time) / 1000));
+	//this takes 11 minutes to run, im such a good programmer
 	}
 }
