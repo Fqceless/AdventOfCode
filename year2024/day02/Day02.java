@@ -23,12 +23,12 @@ public class Day02 {
 	        	currNum = Integer.parseInt(report[0]);
 	        	nextNum = Integer.parseInt(report[1]);
 	        	isIncreasing = currNum < nextNum;
-	            boolean skip = false;
+	            	boolean skip = false;
 	        	
-	            //if a fail happens, abort the whole for loop
+	            	//if a fail happens, abort the whole for loop
 	        	for(int i = 0; i < report.length - 1 && !skip; i++) {
 	        		currNum = Integer.parseInt(report[i]);
-	            	nextNum = Integer.parseInt(report[i + 1]);
+	            		nextNum = Integer.parseInt(report[i + 1]);
 	        		difference = isIncreasing ? nextNum - currNum : currNum - nextNum;
 	        		if(difference < 1 || difference > 3) {
 	        			skip = true;
