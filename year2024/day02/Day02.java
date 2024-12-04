@@ -82,7 +82,7 @@ public class Day02 {
 		}
 		
 		//626
-		System.out.println("Day 02 Part 1 Result: " + result);
+		System.out.println("Day 02 Part 2 Result: " + result);
 		read.close();
 	}
 }
