@@ -7,67 +7,67 @@ public class Day04 {
 	public static void PartOne() throws FileNotFoundException {
 		//Boiler plate for reading the text file
 		File in = new File("inputFiles\\day04.txt");
-        Scanner read = new Scanner(in);
-        
-        //Var decl
-        HashMap<String, Character> map = new HashMap<>();
-        String line = "";
-        int currRow = 0;
-        int currColumn;
-        int result = 0;
-        
-        while(read.hasNext()) {
-        	line = read.next();
-        	currColumn = 0;
-        	for(Character c : line.toCharArray()) {
-        		map.put(pntToStr(currRow, currColumn), c);
-        		currColumn++;
-        	}
-        	currRow++;
-        }
-        
-        for(currRow = 0; currRow < 140; currRow++) {
-        	for(currColumn = 0; currColumn < 140; currColumn++) {
-        		result += checkForXmas(currRow, currColumn, map);
-        	}
-        }
-        
-        //2507
-        System.out.println("Day 04 Part 1 Result: " + result);
-        read.close();
+	        Scanner read = new Scanner(in);
+	        
+	        //Var decl
+	        HashMap<String, Character> map = new HashMap<>();
+	        String line = "";
+	        int currRow = 0;
+	        int currColumn;
+	        int result = 0;
+	        
+	        while(read.hasNext()) {
+	        	line = read.next();
+	        	currColumn = 0;
+	        	for(Character c : line.toCharArray()) {
+	        		map.put(pntToStr(currRow, currColumn), c);
+	        		currColumn++;
+	        	}
+	        	currRow++;
+	        }
+	        
+	        for(currRow = 0; currRow < 140; currRow++) {
+	        	for(currColumn = 0; currColumn < 140; currColumn++) {
+	        		result += checkForXmas(currRow, currColumn, map);
+	        	}
+	        }
+	        
+	        //2507
+	        System.out.println("Day 04 Part 1 Result: " + result);
+	        read.close();
 	}
 
 	public static void PartTwo() throws FileNotFoundException {
 		//Boiler plate for reading the text file
-				File in = new File("inputFiles\\day04.txt");
-		        Scanner read = new Scanner(in);
-		        
-		        //Var decl
-		        HashMap<String, Character> map = new HashMap<>();
-		        String line = "";
-		        int currRow = 0;
-		        int currColumn;
-		        int result = 0;
-		        
-		        while(read.hasNext()) {
-		        	line = read.next();
-		        	currColumn = 0;
-		        	for(Character c : line.toCharArray()) {
-		        		map.put(pntToStr(currRow, currColumn), c);
-		        		currColumn++;
-		        	}
-		        	currRow++;
-		        }
-		        
-		        for(currRow = 1; currRow < 139; currRow++) {
-		        	for(currColumn = 1; currColumn < 139; currColumn++) {
-		        		result += checkForXedMas(currRow, currColumn, map);
-		        	}
-		        }
-		        
-		        //1969
-		        System.out.println("Day 04 Part 2 Result: " + result);
-		        read.close();
+		File in = new File("inputFiles\\day04.txt");
+		Scanner read = new Scanner(in);
+		
+		//Var decl
+		HashMap<String, Character> map = new HashMap<>();
+		String line = "";
+		int currRow = 0;
+		int currColumn;
+		int result = 0;
+		
+		while(read.hasNext()) {
+			line = read.next();
+			currColumn = 0;
+			for(Character c : line.toCharArray()) {
+				map.put(pntToStr(currRow, currColumn), c);
+				currColumn++;
+			}
+			currRow++;
+		}
+		
+		for(currRow = 1; currRow < 139; currRow++) {
+			for(currColumn = 1; currColumn < 139; currColumn++) {
+				result += checkForXedMas(currRow, currColumn, map);
+			}
+		}
+		
+		//1969
+		System.out.println("Day 04 Part 2 Result: " + result);
+		read.close();
 	}
 
 	private static String pntToStr(int x, int y) {
